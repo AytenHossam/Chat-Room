@@ -93,9 +93,13 @@ Edit
 
 ### Database Setup
 
-1. Create a database:
-   ```sql
-   CREATE DATABASE chatroom;
+🛠️ Database Setup
+Create the database:
+
+sql
+Copy
+Edit
+CREATE DATABASE chatroom;
 Create the messages table:
 
 sql
@@ -109,42 +113,31 @@ CREATE TABLE messages (
     message TEXT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-Update database credentials in:
+Update your database credentials in the following files:
 
 clientSide/Database/Connection.java
 
 serverSide/Database/Connection.java
 
-Compile & Run
-Compile all files:
+▶️ Compile & Run
+Compile all Java files:
 
 bash
 Copy
 Edit
 javac Main.java
-Run the server:
+Run the server (on the host machine):
 
 bash
 Copy
 Edit
-java Main    # When configured as server
-Run the client (on same or other device on same Wi-Fi):
+java Main
+Run the client (on the same or another device on the same Wi-Fi):
 
 bash
 Copy
 Edit
-java Main    # When configured as client
-  Example Use Case
-Start the server on one machine (e.g., 192.168.1.10)
-
-Run the client on other devices connected to the same network
-
-Users join by entering their names and server IP
-
-Messages are exchanged in real time and stored in the database
-
-Chat history can be saved locally
-
+java Main
   Possible Extensions
 Private messaging
 
