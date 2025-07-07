@@ -94,14 +94,12 @@ Edit
 ### Database Setup
 
 🛠️ Database Setup
-Create the database:
-
+1. Create the Database
 sql
 Copy
 Edit
 CREATE DATABASE chatroom;
-Create the messages table:
-
+2. Create the messages Table
 sql
 Copy
 Edit
@@ -113,43 +111,46 @@ CREATE TABLE messages (
     message TEXT,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-Update your database credentials in the following files:
+3. Update Database Credentials
+Update your database connection settings in the following files:
 
 clientSide/Database/Connection.java
 
 serverSide/Database/Connection.java
 
 ▶️ Compile & Run
-Compile all Java files:
-
+1. Compile All Java Files
 bash
 Copy
 Edit
 javac Main.java
-Run the server (on the host machine):
+Or use your IDE (like IntelliJ or Eclipse) to build the project.
+
+2. Run the Server
+bash
+Copy
+Edit
+java Main
+(Make sure the server IP and port are correctly configured)
+
+3. Run the Client(s)
+From any device on the same Wi-Fi:
 
 bash
 Copy
 Edit
 java Main
-Run the client (on the same or another device on the same Wi-Fi):
+Enter your username and the server IP when prompted.
 
-bash
-Copy
-Edit
-java Main
-  Possible Extensions
-Private messaging
+✅ Example Use Case
+Start the server on one machine (e.g., 192.168.1.10)
 
-Authentication & user registration
+Start the client on another device connected to the same LAN
 
-Group chats
+Enter a username and server IP to join the room
 
-WebSocket integration
+Start messaging with other connected users
 
-Chat history viewer UI
-
- Author
-Ayten Hossam
+Messages are stored in MySQL and optionally saved locally
 GitHub: @AytenHossam
 
